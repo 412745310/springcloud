@@ -12,9 +12,15 @@ public class HelloController {
 
     @Autowired
     HelloService helloService;
+    
     @RequestMapping(value = "/hello/{name}")
     public String hi(@PathVariable String name){
         return helloService.hiService(name);
+    }
+    
+    @RequestMapping(value = "/hello/test")
+    public void test(){
+        helloService.test();
     }
     
 }
